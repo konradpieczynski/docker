@@ -8,12 +8,11 @@ services:
     ports:
       - '3306:3306'
     volumes:
-      - mysqldocker_my-db:/var/lib/mysql
+      - my-db:/var/lib/mysql
   adminer:
     image: adminer
     restart: always
     ports:
       - '8080:8080'
 volumes:
-  mysqldocker_my-db:
-    external: true
+  my-db:
